@@ -1,12 +1,17 @@
+/*
+Descrizione:
+Partendo dal markup della versione svolta in js plain, rifare lo slider ma questa volta usando Vue.
+Bonus:
+1- al click su una thumb, visualizzare in grande l'immagine corrispondente
+2- applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
+3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
+*/
+
 const {createApp} = Vue;
 
 createApp ({
     data() {
         return {
-            // button up
-            btnUp: 'fs-5 fa-solid fa-chevron-circle-up'
-            // button down
-            btnDown: 'fs-5 fa-solid fa-chevron-circle-down'
             // array slides
             slides: [
                 {
@@ -37,19 +42,19 @@ createApp ({
     methods: {
         nextSlide(){
             // this.activeIndex++;
-            if (activeIndex === slides.length -1){
-                activeIndex = 0;
+            if (this.activeIndex === this.slides.length -1){
+                this.activeIndex = 0;
             } else {
-                activeIndex++;
+                this.activeIndex++;
             };
         },
         prevSlide(){
             // this.activeIndex--;
-            if (activeIndex === 0) {
-                activeIndex = slides.length - 1;
+            if (this.activeIndex === 0) {
+                this.activeIndex = this.slides.length - 1;
             } else {
-                activeIndex--;
-            };
+                this.activeIndex--;
+            }
         }
     },
     mounted: {

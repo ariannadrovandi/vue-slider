@@ -22,15 +22,15 @@
             </div>
             <!-- div thumb -->
             <div class="thumbs">
-                <div class="thumb active" v-for="(slide,index) in slides" :key="index">
+                <div class="thumb active" v-for="(slide,index) in slides" :key="index" :class="{'active' : activeIndex === index}">
                     <!-- img connected with slide [image] -->
                     <img :src="slide.image" :alt="slide.title">
                 </div>
                 <div class="prev" @click="prevSlide">
-                    <i :class="btnUp"></i>
+                    <i class="fs-5 fa-solid fa-chevron-circle-up"></i>
                 </div>
                 <div class="next" @click="nextSlide">
-                    <i :class="btnDown"></i>
+                    <i class="fs-5 fa-solid fa-chevron-circle-down"></i>
                 </div>
             </div>
         </div>
