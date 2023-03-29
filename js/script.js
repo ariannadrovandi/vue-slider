@@ -3,6 +3,10 @@ const {createApp} = Vue;
 createApp ({
     data() {
         return {
+            // button up
+            btnUp: 'fs-5 fa-solid fa-chevron-circle-up'
+            // button down
+            btnDown: 'fs-5 fa-solid fa-chevron-circle-down'
             // array slides
             slides: [
                 {
@@ -49,8 +53,6 @@ createApp ({
         }
     },
     mounted: {
-        startCarousel() {
-            
-        }
+       
     }
 }).mount('#app');
