@@ -13,13 +13,17 @@
     
     <div id="app">
         <div class="container">
+            <!-- div item -->
             <div class="items">
                 <div class="items active">
-                    <img :src="" :alt="">
+                    <!-- img connected with slide [image] index -->
+                    <img :src="slides[activeIndex].image" :alt="slides[activeIndex].title">
                 </div>
             </div>
+            <!-- div thumb -->
             <div class="thumbs">
                 <div class="thumb active">
+                    <!-- img connected with slide [image] -->
                     <img :src="" :alt="">
                 </div>
                 <div class="prev"></div>
