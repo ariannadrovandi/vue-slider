@@ -26,12 +26,12 @@
                     <!-- img connected with slide [image] -->
                     <img :src="slide.image" :alt="slide.title">
                 </div>
-                <div class="prev" @click="prevSlide">
+                <button class="prev" @click="prevSlide">
                     <i class="fs-5 fa-solid fa-chevron-circle-up"></i>
-                </div>
-                <div class="next" @click="nextSlide">
+                </button>
+                <button class="next" @click="nextSlide">
                     <i class="fs-5 fa-solid fa-chevron-circle-down"></i>
-                </div>
+                </button>
             </div>
         </div>
     </div>
@@ -42,3 +42,4 @@
     <script type="text/javascript" src="./js/utility.js"></script>
 </body>
 </html>
+
