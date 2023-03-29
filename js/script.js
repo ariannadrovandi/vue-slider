@@ -32,11 +32,25 @@ createApp ({
     },
     methods: {
         nextSlide(){
-            this.activeIndex++;
+            // this.activeIndex++;
+            if (activeIndex === slides.length -1){
+                activeIndex = 0;
+            } else {
+                activeIndex++;
+            };
         },
         prevSlide(){
-            this.activeIndex--;
+            // this.activeIndex--;
+            if (activeIndex === 0) {
+                activeIndex = slides.length - 1;
+            } else {
+                activeIndex--;
+            };
         }
     },
-    
+    mounted: {
+        startCarousel() {
+            
+        }
+    }
 }).mount('#app');
