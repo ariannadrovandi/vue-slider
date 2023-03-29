@@ -22,9 +22,9 @@
             </div>
             <!-- div thumb -->
             <div class="thumbs">
-                <div class="thumb active">
+                <div class="thumb active" v-for="(slide,index) in slides" :key="index">
                     <!-- img connected with slide [image] -->
-                    <img :src="" :alt="">
+                    <img :src="slide.image" :alt="slide.title">
                 </div>
                 <div class="prev"></div>
                 <div class="next"></div>
