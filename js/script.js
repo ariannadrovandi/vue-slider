@@ -37,6 +37,7 @@ createApp ({
                 }
             ],
             activeIndex: 0,
+            active: 'active',
         }
     },
     methods: {
@@ -55,9 +56,15 @@ createApp ({
             } else {
                 this.activeIndex--;
             }
+        },
+        startCarousel (){
+            return setInterval(this.nextSlide, 2000);
+        },
+        stopCarousel(){
+            clearInterval(this.interval);
         }
     },
     mounted() {
-       
+       this.startCarousel()
     }
 }).mount('#app');
